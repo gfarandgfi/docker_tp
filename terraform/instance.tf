@@ -23,7 +23,7 @@ resource "aws_network_interface" "primary" {
   tags = {
     Name = "primary_network_interface"
   }
-  depends_on = [aws_subnet.formation_docker]
+  depends_on = [aws_subnet.formation_docker, aws_security_group.allow_ssh]
 }
 
 
