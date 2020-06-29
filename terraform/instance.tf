@@ -34,13 +34,13 @@ resource "aws_instance" "docker1" {
   key_name      = "admin"
   security_groups = ["default"]
   get_password_data = true
-  # associate_public_ip_address = true
-  network_interface {
-    device_index = 0
-    network_interface_id = aws_network_interface.primary.id
-    # False is the only valid value at the time of writing this code
-    delete_on_termination = false
-  }
+  associate_public_ip_address = true
+  # network_interface {
+  #   device_index = 0
+  #   network_interface_id = aws_network_interface.primary.id
+  #   # False is the only valid value at the time of writing this code
+  #   delete_on_termination = false
+  # }
 
   # # Install the docker binaries
   # provisioner "local-exec" {
