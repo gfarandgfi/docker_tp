@@ -14,9 +14,8 @@ variable "aws_default_region" {
 }
 
 variable "aws_default_zone" {
-  description = "Default region for the resources that will be deployed"
+  description = "Default zone for the resources that will be deployed"
   type = string
-  default = "eu-west-3a"
 }
 
 variable "aws_instance_ami" {
@@ -27,5 +26,4 @@ variable "aws_instance_ami" {
 variable "aws_instance_type" {
   description = "The type of instance that will be creted. Defaults to c5.large (2vCPU 4096Mio RAM, as per Docker's recommended system requirements)"
   type = string
-  default = "c5.large"
 }
