@@ -40,7 +40,7 @@ resource "aws_instance" "docker1" {
     device_index = 0
     network_interface_id = aws_network_interface.primary.id
     # False is the only valid value at the time of writing this code
-    deletes_on_termination = false
+    delete_on_termination = false
   }
 
   # # Install the docker binaries
