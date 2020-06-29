@@ -1,5 +1,5 @@
 output "public_ip" {
-  value = aws_instance.public_ip
+  value = aws_instance.docker1.public_ip
 }
 
 output "ssh_key_public" {
@@ -7,5 +7,5 @@ output "ssh_key_public" {
 }
 
 output "root_password" {
-  value = random_string.root_pass.result
+  value = random_string.admin_pass.result
 }

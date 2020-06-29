@@ -36,7 +36,7 @@ resource "aws_instance" "docker1" {
   password_data = base64encode(random_string.admin_pass)
   get_password_data = true
   associate_public_ip_address = true
-  network_interface = {
+  network_interface {
     device_index = 0
     network_interface_id = aws_network_interface.primary.id
     # False is the only valid value at the time of writing this code
