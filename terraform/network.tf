@@ -25,3 +25,26 @@ resource "aws_internet_gateway" "formation_docker" {
   }
   depends_on = [aws_vpc.formation_docker, aws_subnet.formation_docker]
 }
+
+# Open port 22 so the machine is accessible via ssh
+resource "aws_security_group" "allow_ssh" {
+  name = "allow_ssh"
+  description = "allow ssh in and all out"
+  vpc_id      = aws_vpc.formation_docker.id
+
+  ingress {
+      from_port   = 22
+      to_port     = 22
+      protocol    = "tcp"
+      cidr_blocks     = [aws_vpc.formation_docker.cidr_block]
+    }
+
+  egress {
+      from_port       = 0
+      to_port         = 0
+      protocol        = "tcp"
+      cidr_blocks     = ["0.0.0.0/0"]
+    }
+
+  depends_on = [aws_vpc.formation_docker]
+  }

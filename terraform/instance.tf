@@ -19,7 +19,7 @@ resource "aws_key_pair" "admin" {
 resource "aws_network_interface" "primary" {
   subnet_id   = aws_subnet.formation_docker.id
   description = "primary network interface"
-  security_groups = [aws_security_group.allow_ssh.name]
+  security_groups = [aws_security_group.allow_ssh.id]
   tags = {
     Name = "primary_network_interface"
   }
