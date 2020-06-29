@@ -1,7 +1,7 @@
-variable "aws_access_key" {
-  description = "Access key provided by AWS. Please do not hardcode"
-  type = string 
-}
+# variable "aws_access_key" {
+#   description = "Access key provided by AWS. Please do not hardcode"
+#   type = string 
+# }
 
 # variable "aws_secret_key" {
 #   description = "Secret key provided by AWS. Please do not hardcode"

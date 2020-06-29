@@ -1,4 +1,4 @@
-## Lease set up your credentials as env vars, so you don't have to hardcode them
+## Please set up your credentials as env vars, so you don't have to hardcode them
 
 provider "aws" {
   # access_secret = var.aws_access_key
