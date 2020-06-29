@@ -33,7 +33,7 @@ resource "aws_instance" "docker1" {
   instance_type = var.aws_instance_type
   key_name      = "admin"
   security_groups = ["default"]
-  password_data = "${base64encode(random_string.admin_pass)}"
+  password_data = base64encode(random_string.admin_pass)
   get_password_data = true
   associate_public_ip_address = true
   network_interface = {
