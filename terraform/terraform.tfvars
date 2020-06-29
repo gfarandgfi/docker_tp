@@ -6,7 +6,7 @@ aws_default_region = "eu-west-3"
 
 aws_default_zone = "eu-west-3a"
 
-aws_instance_type = "c5.large"
+aws_instance_type = "t2.medium"
 
 
 

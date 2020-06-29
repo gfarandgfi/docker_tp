@@ -32,7 +32,7 @@ resource "aws_instance" "docker1" {
   ami           = var.aws_instance_ami
   instance_type = var.aws_instance_type
   key_name      = "admin"
-  security_groups = ["default"]
+  security_groups = [aws_security_group.allow_ssh.id]
   get_password_data = true
   associate_public_ip_address = true
   # network_interface {
@@ -53,5 +53,6 @@ resource "aws_instance" "docker1" {
   #     sudo usermod -aG docker ${aws_instance.docker1.key_name}    && \
   #     rm -rf *"
   # }
+  depends_on = [aws_security_group.allow_ssh]
 }
 
