@@ -26,8 +26,8 @@ Pour sortir, un 'exit' ou un 'Ctrl-D' suffit à terminer le shell bash, et le co
 ### Exercice
 
 Essayez la même commande avec un container alpine.
-- Que se passe-t-il ?
-- Pourquoi ?
+- [ ] Que se passe-t-il ?
+- [ ] Pourquoi ?
 
 
 ### Remarques
