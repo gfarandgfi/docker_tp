@@ -19,15 +19,17 @@ docker run -it centos:7 bash
 ```
 
 Le container se lance et surprise! vous obtenez un shell root à l'intérieur.
-Vous pouvez en proficter pour exécuter toutes les commandes que vous souhaitez (date, ls, vi, cd, touch...)
+Vous pouvez en profiter pour exécuter toutes les commandes que vous souhaitez (date, ls, vi, cd, touch...)
 
 Pour sortir, un 'exit' ou un 'Ctrl-D' suffit à terminer le shell bash, et le container se termine en même temps.
 
 
-#### Attention !
-Inclure 'bash' en fon de ligne ne fonctionne pas à tous les coups. En effet, si le shell bash n'existe pas sur l'OS qui tourne dans notre container, il ne sera évidemment pas accessible.
+### Remarques
+    * Inclure 'bash' en fin de ligne ne fonctionne pas à tous les coups. En effet, si le shell bash n'existe pas sur l'OS qui tourne dans notre container, il ne sera évidemment pas accessible.
 
-De même, il n'est pas nécéssaire d'ouvrir un shell pour éxecuter une commande. Il est tout à fait possible de faire éxecuter une commande à notre container au lancement.
+    * De même, si un binaire quelconque n'éxiste pas dans le container, il faudra l'installer avant de s'en servir (cas fréquent de wget). Il convient de vérifier cette information avant de choisir un OS de base.
+
+    * Il n'est pas nécéssaire d'ouvrir un shell pour éxecuter une commande. Il est tout à fait possible de faire éxecuter une commande à notre container au lancement.
 
 
 ### Se connecter à un container existant
