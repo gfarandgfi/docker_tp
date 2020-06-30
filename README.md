@@ -1,9 +1,11 @@
 # Travaux pratiques pour formation docker
 
-## TP no 5
+## TP-05
 Construire une image minimale
 
 ### Objectif
+Construire le container hello-world à partir des éléments fournis
+
 Ceci est mon TP préféré.
 Il combine beaucoup de points d'intérêts
 - [ ] Il permet d'illustrer la construction d'image from scratch
@@ -30,4 +32,3 @@ docker run hello-world
 Félicitations ! :+1:
 
 **Remarque** : Notez (via un 'docker image ls' la taille minimale de cette image)
-
