@@ -27,7 +27,7 @@ Exemple:
 ```
 docker ps
 ```
-Est déprécié et voué à disparaitre. Aujourd'hui docker obn utilise
+Est déprécié et voué à disparaitre. Aujourd'hui on utilise
 ```
 docker container list
 ```
