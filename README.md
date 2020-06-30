@@ -48,6 +48,7 @@ docker exec -it dodo bash
 Cela permet de voir le process exécuté (avec la commande ps) ou de suivre les logs (avec par exemple un tail -f )
 Vous pouvez quitter ce shell bash, le container hôte continuera à vivre.
 
+
 ### La méthode attach
 Selon la documentation, il y a une méthode plus simple
 ```
