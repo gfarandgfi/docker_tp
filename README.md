@@ -25,9 +25,9 @@ Pour sortir, un 'exit' ou un 'Ctrl-D' suffit à terminer le shell bash, et le co
 
 
 #### Attention !
-Inclure 'bash' ne fonctionne pas à tous les coups. Si le shell bash n'existe pas sur l'OS qui tourne dans notre container, il ne sera évidemment pas accessible.
+Inclure 'bash' en fon de ligne ne fonctionne pas à tous les coups. En effet, si le shell bash n'existe pas sur l'OS qui tourne dans notre container, il ne sera évidemment pas accessible.
 
-De même, il n'est pas nécéssaire d'ouvrir un shell. Il est tout à fait possible de faire éxecuter une commande à notre container au lancement.
+De même, il n'est pas nécéssaire d'ouvrir un shell pour éxecuter une commande. Il est tout à fait possible de faire éxecuter une commande à notre container au lancement.
 
 
 ### Se connecter à un container existant
