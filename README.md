@@ -20,7 +20,8 @@ docker
 ```
 Permet de voir la liste des commandes possible avec le CLI.
 
-Historiquement, les commandes étaient directes et simples, réduites à un verbe (**Commands**). Mais avec le temps, les possibilités augmentant, elles ont été regroupées en catégories (**Management Commands**), soit un nom suivi d'un verbe.
+Historiquement, les commandes étaient directes et simples, réduites à un verbe (**Commands**).
+Avec le temps, les possibilités augmentant, elles ont été regroupées en catégories (**Management Commands**), soit un nom suivi d'un verbe.
 
 Exemple: 
 ```
