@@ -1,6 +1,6 @@
 # Travaux pratiques pour formation docker
 
-## TP no 2
+## TP-02
 Démarrer nos premiers containers
 
 
