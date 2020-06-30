@@ -1,18 +1,25 @@
 # Travaux pratiques pour formation docker
 
-## TP no 4
+## TP-04
 Container en mode interactif
 
 ### Executer un container en y restant connecté
-Tout d'abord, il est possible d'exécuter un container en y restant connecté.
-[] option -i pour maintenir stdin ouverte
-[] option -t pour attribuer un pseudo terminal (tty)
-[] préciser une commande à exécuter dans le container (ici bash)
+Au TP-03, la première fois que nous avons lancé notre container nginx, stdout s'affichait à l'écran, mais nous ne pouvions pas interagir.
 
-Prenons l'exemple d'une distribution centos 7
+L'écran affichait donc bien stdout, mais stdin n'était pas disponible. Pour executer le même container en mode interactif, il nous faut donc:
+
+[] maintenir stdin ouvert - flag -i
+[] attribuer un terminal (tty) - flag -t
+[] executer une commande
+
+Prenons l'exemple d'une distribution centos 7.
+Notre commande est donc la suivante:
 ```
 docker run -it centos:7 bash
 ```
+
+#### Attention !
+Inclure 'bash' ne fonctionne pas à tous les coups. Si le shell bash n'existe pas sur l'OS qui tourne dans notre container, il ne sera évidemment pas accessible.
 
 Le container se lance et surprise vous obtenez un shell root à l'intérieur.
 Vous pouvez en proficter pour exécuter toutes les commandes que vous souhaitez (date, ls, vi, cd, touch...)
