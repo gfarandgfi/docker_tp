@@ -1,7 +1,7 @@
 # Travaux pratiques pour formation docker
 
 ## TP-06
-Construire une image tomcat
+Exercice construire une image tomcat
 
 ### Construction de l'image
 Puisque nous sommes à présent incollables sur le dockerfile, construisons notre propre image tomcat.
