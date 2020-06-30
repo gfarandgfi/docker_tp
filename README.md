@@ -3,7 +3,7 @@
 ## TP no 00
 Prise en main.
 
-### Git et docker ont été pré-installés sur vos machines
+### Git et docker ont été pré-installés et vos machines parametrées
 
 Pour verifier ceci nous allons effectuer deux actions:
   
@@ -21,30 +21,3 @@ git checkout tp-xx
   ```
   docker run hello-world
   ```
-
-### Pour ce TP, il faut être root :
-```
-sudo su – 
-```
-
-### Pour installer git :
-```
-yum install -y git
-```
-
-### Pour installer docker-ce :
-```
-yum install -y yum-utils
-yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-yum install -y docker-ce docker-ce-cli containerd.io
-systemctl start docker
-systemctl enable docker
-```
-
-### Paramétrage de l’environnement :
-```
-usermod –a –G docker gfiuser
-echo "gfiuser ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
-exit
-```
-
