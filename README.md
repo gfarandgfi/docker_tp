@@ -41,7 +41,7 @@ Pourquoi ?
 ## Se connecter à un container existant
 
 ### La méthode exec
-Imaginons un container en cours d'execution
+Soit un container en cours d'execution
 ```
 docker run -d --name dodo centos:7 sleep 120
 ```
