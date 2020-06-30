@@ -9,9 +9,9 @@ Au TP-03, la première fois que nous avons lancé notre container nginx, stdout 
 
 L'écran affichait donc bien stdout, mais stdin n'était pas disponible. Pour executer le même container en mode interactif, il nous faut donc:
 
-[] maintenir stdin ouvert (flag -i)
-[] attribuer un terminal (tty) (flag -t)
-[] executer une commande
+-[] maintenir stdin ouvert (flag -i)
+-[] attribuer un terminal (tty) (flag -t)
+-[] executer une commande
 
 Nous voulons, par exemple, faire tourner interactivement un container sous centos 7. Notre commande est la suivante:
 ```
