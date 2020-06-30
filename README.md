@@ -57,5 +57,3 @@ Cette méthode est pratique, car nous héritons automatiquement des flux stdin, 
 Cependant, elle est aussi plus risquée car comme nous sommes directement connecté au vrai container, un Ctrl-C tuerait le container de facto.
 
 A utiliser avec parcimonie, et uniquement en test.
-
-
