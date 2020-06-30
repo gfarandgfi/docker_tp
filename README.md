@@ -70,5 +70,5 @@ Pour supprimer une image, c'est pratiquement la même commande  :grinning:
 
 ### Comment trouver plus d'images ? Visite du Docker Hub
 
-Avec un navigateur, visiter le [Hub Docker](https://hub.docker.com/) : https://hub.docker.com/
+Avec un navigateur, visite guidée du [Hub Docker](https://hub.docker.com/) : https://hub.docker.com/
 
