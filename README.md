@@ -13,7 +13,8 @@ L'écran affichait donc bien stdout, mais stdin n'était pas disponible. Pour ex
 - attribuer un terminal (tty) virtuel
 - donner au container une commande à éxecuter
 
-Imaginons que nous voulons faire tourner interactivement un container sous centos 7. Notre commande est la suivante:
+Imaginons que nous voulons faire tourner interactivement un container sous centos 7. 
+Notre commande sera la suivante:
 ```
 docker run -it centos:7 bash
 ```
