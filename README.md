@@ -69,5 +69,3 @@ Vérifiez qu'il télécharge bien la nouvelle image (docker pull) et constatez-l
 ```
 docker image list
 ```
-
-
