@@ -5,23 +5,19 @@ Démarrer nos premiers containers
 
 
 ### Executez un premier container type hello-word
-Avec un navigateur, visiter le [Hub Docker](https://hub.docker.com/) : https://hub.docker.com/
 
-Utilisez le champs de recherche pour trouver l'application officielle **hello-world**
-
-Comme proposé dans la page, vous pouvez l'éxécuter de la façon suivante :
-
+Envoyez la commande suivante:
 ```
 docker run hello-world
 ```
 
-
 La sortie écran (stdout) vous explique ce qu'il s'est déroulé :
  1. Le client docker a contacté (via api) le daemon docker
- 2. Le daemon docker a téléchargé l'image **hello-world** depuis la registry publique (docker pull hello-world)
- 3. Le daemon docker a instancié un container à partir de l'image **hello-world** (docker start hello-world)
+ 2. Le daemon docker a constaté que l'image recherchée n'est pas présente localement.
+ 3. Le daemon docker a téléchargé l'image **hello-world** depuis la registry publique (docker pull hello-world)
+ 4. Le daemon docker a instancié un container à partir de l'image **hello-world** (docker start hello-world)
     (Cette application ne fait qu'écrire le texte sur stdout)
- 4. Le daemon docker stream la sortie standard *stdout* pour l'afficher à l'écran.
+ 5. Le daemon docker stream la sortie standard *stdout* pour l'afficher à l'écran.
 
 **Remarque 1** : A l'avenir, il est plus précis et plus pérenne d'utiliser les **Management Commands**. 
 ```
@@ -70,4 +66,9 @@ Pour supprimer une image, c'est pratiquement la même commande  :grinning:
      docker image rm <image_id>
    ```
 **Remarque 5** : Pour pouvoir détruire une image, il faut avoir détruit tous les containers la référençant (en cours ou arrêtés).
+
+
+### Comment trouver plus d'images ? Visite du Docker Hub
+
+Avec un navigateur, visiter le [Hub Docker](https://hub.docker.com/) : https://hub.docker.com/
 
