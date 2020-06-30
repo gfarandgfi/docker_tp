@@ -1,7 +1,7 @@
 # Travaux pratiques pour formation docker
 
 ## TP-05
-Construire une image minimale
+Introduction au dockerfile
 
 ### Objectif
 Construire le container hello-world à partir des éléments fournis
