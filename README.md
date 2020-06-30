@@ -10,7 +10,8 @@ Pour verifier ceci nous allons effectuer deux actions:
   - cloner le repo de ce TP
   ```bash
   git clone https://github.com/gfarandgfi/docker_tp.git
-  ```
+  ```bash
+  
     Chaque nouveau TP est sur une nouvelle branche. Pour en changer il suffira de la checkout:
     ```bash
     git checkout tp-xx
