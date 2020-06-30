@@ -33,7 +33,7 @@ resource "aws_instance" "docker1" {
   instance_type = var.aws_instance_type
   key_name      = "admin"
   security_groups = [aws_security_group.allow_ssh.id]
-  get_password_data = true
+  # get_password_data = true
   associate_public_ip_address = true
   # network_interface {
   #   device_index = 0
