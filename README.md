@@ -17,7 +17,7 @@ Chaque nouveau TP est sur une nouvelle branche. Pour en changer il suffira de la
 git checkout tp-xx
 ```
 
-  - lancer un container test (et observer le comportement de Docker)
+  - verifier que docker répond
   ```
-  docker run hello-world
+  docker version
   ```
