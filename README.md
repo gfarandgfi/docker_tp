@@ -9,9 +9,9 @@ Au TP-03, la première fois que nous avons lancé notre container nginx, stdout 
 
 L'écran affichait donc bien stdout, mais stdin n'était pas disponible. Pour executer le même container en mode interactif, il nous faut donc:
 
-- maintenir stdin ouvert
-- attribuer un terminal (tty) virtuel
-- donner au container une commande à éxecuter
+- [ ] maintenir stdin ouvert
+- [ ] attribuer un terminal (tty) virtuel
+- [ ] donner au container une commande à éxecuter
 
 Imaginons que nous voulons faire tourner interactivement un container sous centos 7. 
 Notre commande sera la suivante:
@@ -25,7 +25,7 @@ Pour sortir, un 'exit' ou un 'Ctrl-D' suffit à terminer le shell bash, et le co
 
 ### Exercice
 
-Essayez la même commande avec un container alpine ? 
+Essayez la même commande avec un container alpine
 Que se passe-t-il ?
 Pourquoi ?
 
