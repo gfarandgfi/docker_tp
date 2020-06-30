@@ -26,8 +26,7 @@ Exemple:
 ```
 docker ps
 ```
-Est déprécié et voué à disparaitre. Aujourd'hui docker utilise la structure docker <fonction> <commande>
-Exemple:
+Est déprécié et voué à disparaitre. Aujourd'hui docker obn utilise
 ```
 docker container list
 ```
