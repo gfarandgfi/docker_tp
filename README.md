@@ -23,11 +23,17 @@ Le container se lance et surprise! vous obtenez un shell root à l'intérieur. V
 
 Pour sortir, un 'exit' ou un 'Ctrl-D' suffit à terminer le shell bash, et le container se termine en même temps.
 
+### Exercice
+
+Essayez la même commande avec un container alpine ? 
+Que se passe-t-il ?
+Pourquoi ?
+
 
 ### Remarques
 - Inclure 'bash' en fin de ligne ne fonctionne pas à tous les coups! En effet, si le shell bash n'existe pas sur l'OS qui tourne dans notre container, il ne sera évidemment pas accessible.
 
-- De même, si un binaire quelconque n'éxiste pas dans le container, il faudra l'installer avant de s'en servir (cas fréquent de wget). Il convient de vérifier cette information avant de choisir un OS de base.
+- De même, si un binaire quelconque n'éxiste pas dans le container, il faudra l'installer avant de s'en servir (cas fréquent de wget), si toutefois il existe pour cette distribution (cf apk sous alpine). Il convient de vérifier cette information avant de choisir un OS de base.
 
 - Il n'est pas nécéssaire d'ouvrir un shell pour éxecuter une commande. Il est tout à fait possible de faire éxecuter une commande à notre container au lancement.
 
@@ -45,8 +51,9 @@ Vous pouvez vous y connecter (via son nom ou son id) et observer de l'intérieur
 docker exec -it dodo bash
 ```
 
-Cela permet de voir le process exécuté (avec la commande ps) ou de suivre les logs (avec par exemple un tail -f )
-Vous pouvez quitter ce shell bash, le container hôte continuera à vivre.
+Cela permet de voir les process exécutés (avec la commande ps), de suivre les logs (avec par exemple un tail -f) ou de lancer des commandes à des fins de debugage.
+
+Le container tourne en détaché. Sortir du shell (ctrl+D) ne le tuera donc pas.
 
 
 ### La méthode attach
