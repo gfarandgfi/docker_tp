@@ -1,6 +1,6 @@
 # Travaux pratiques pour formation docker
 
-## TP no 00
+## TP-00
 Prise en main.
 
 ### Git et docker ont été pré-installés et vos machines parametrées
