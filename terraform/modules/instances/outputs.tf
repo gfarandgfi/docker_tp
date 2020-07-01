@@ -7,5 +7,5 @@ output "student_instance_1_ssh_key_public" {
 }
 
 output "student_instance_1_root_password" {
-  random_string.admin_pass.result
+  value = random_string.admin_pass.result
 }
