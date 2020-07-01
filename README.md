@@ -1,6 +1,6 @@
 # Travaux pratiques pour formation docker
 
-## TP no 7
+## TP-07
 Utiliser un volume sur un container web
 
 ### Creation d'un volume nommé
