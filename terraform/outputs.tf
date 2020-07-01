@@ -50,11 +50,11 @@ output "student_instance_5_public_ip" {
   value = module.student_instance_5.aws_instance.public_ip
 }
 
-output "student_instance_4_ssh_key_public" {
+output "student_instance_5_ssh_key_public" {
   value = module.student_instance_5.public_key_openssh
 }
 
-output "student_instance_4_root_password" {
+output "student_instance_5_root_password" {
   value = module.student_instance_5.random_string.admin_pass.result
 }
 
