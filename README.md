@@ -1,6 +1,6 @@
 # Travaux pratiques pour formation docker
 
-## TP no 8
+## TP-08
 Jouer avec la registry publique
 
 ### Création d'un docker ID
