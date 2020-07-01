@@ -1,6 +1,6 @@
 variable "tags" {
   description = "The tags that will be assigned to the instance"
-  type = map(string)
+  type        = map(string)
 }
 
 variable "aws_instance_type" {
