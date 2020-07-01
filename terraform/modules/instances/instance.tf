@@ -14,7 +14,7 @@ resource "aws_network_interface" "primary" {
 resource "aws_instance" "student" {
   for_each  = var.student_names
   tags      = {
-    name    = "${each.key}"
+    Name    = "${each.key}"
   }
   ami           = var.aws_instance_ami
   instance_type = var.aws_instance_type
