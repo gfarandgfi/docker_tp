@@ -27,7 +27,7 @@ resource "aws_instance" "student" {
 
   # Install the git and docker binaries
   provisioner "remote-exec" {
-    script = ./files/install_server.sh
+    script = "./files/install_server.sh"
   }
   depends_on = [aws_security_group.allow_ssh, aws_key_pair.docker]
 }
