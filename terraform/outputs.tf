@@ -14,7 +14,7 @@ output "instance_ip" {
   value = module.instances.public_ip
 }
 
-ouput "instance_dns_name" {
+output "instance_dns_name" {
   value = module.network.public_dns
 }
 
