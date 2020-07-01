@@ -11,8 +11,10 @@ output "security_group_id" {
 }
 
 output "instance_ip" {
-  value = module.instances.public_ip
-}
+  value = {
+    for instance in aws_instance.example:
+    instance.id => instance.private_ip
+  }
 
 output "instance_dns_name" {
   value = module.network.public_dns

@@ -10,3 +10,8 @@ variable "aws_instance_type" {
 variable "aws_instance_ami" {
   type = string
 }
+
+variable "student_names" {
+  type = list(string)
+}
+  

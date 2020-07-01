@@ -17,7 +17,7 @@ resource "aws_instance" "student" {
   key_name      = "formation_docker"
   security_groups = [data.aws_security_group.selected.id]
   associate_public_ip_address = true
-  tags = var.tags
+  # tags = var.tags
   network_interface {
     device_index = 0
     network_interface_id = aws_network_interface.primary.id
