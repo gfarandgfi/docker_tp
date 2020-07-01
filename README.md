@@ -1,6 +1,6 @@
 # Travaux pratiques pour formation docker
 
-## TP no 09
+## TP-09
 Jouer avec une registry privée
 
 ### Objectif
