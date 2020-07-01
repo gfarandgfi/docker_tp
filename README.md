@@ -1,6 +1,6 @@
 # Travaux pratiques pour formation docker
 
-## TP no 10
+## TP-10
 Build multistage
 
 ### Objectif
@@ -37,5 +37,3 @@ Executez l'application  :
 ```
 docker run appli-hello 
 ```
-
-
