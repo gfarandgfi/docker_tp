@@ -51,4 +51,3 @@ Testez
 ```
 curl http://capcloud-X.westeurope.cloudapp.azure.com:8080/
 ```
-
