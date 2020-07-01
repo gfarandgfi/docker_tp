@@ -6,6 +6,9 @@ module "network" {
   network_tags = {
     Name = "subnet_formation_docker"
   }
+  subnet_tags = {
+    Name = "subnet_formation_docker"
+  }
 }
 
 # Create five separate instances with different tags
