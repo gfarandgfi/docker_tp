@@ -1,9 +1,4 @@
-# Generate randomised password for the admin user
-resource "random_string" "admin_pass" {
-  length = 16
-  special = true
-}
-
+# Create a primary network interface
 resource "aws_network_interface" "primary" {
   subnet_id   = aws_subnet.formation_docker.id
   description = "primary network interface"
@@ -21,7 +16,6 @@ resource "aws_instance" "student" {
   instance_type = var.aws_instance_type
   key_name      = "docker"
   security_groups = [aws_security_group.allow_ssh.id]
-  # get_password_data = true
   associate_public_ip_address = true
   tags = var.tags
   # network_interface {
@@ -31,18 +25,18 @@ resource "aws_instance" "student" {
   #   delete_on_termination = false
   # }
 
-  # # Install the git and docker binaries
-  # provisioner "local-exec" {
-  #   working_dir = /tmp
-  #   command = "
-  #     sudo apt update                                     && \
-  #     sudo apt install -y git
-  #     sudo apt install -y curl                            && \
-  #     curl -fsSL https://get.docker.com -o get-docker.sh  && \
-  #     sudo sh get-docker.sh                               && \
-  #     sudo usermod -aG docker ${aws_instance.docker1.key_name}    && \
-  #     rm -rf *"
-  # }
+  # Install the git and docker binaries
+  provisioner "local-exec" {
+    working_dir = /tmp
+    command = "
+      sudo apt update                                     && \
+      sudo apt install -y git
+      sudo apt install -y curl                            && \
+      curl -fsSL https://get.docker.com -o get-docker.sh  && \
+      sudo sh get-docker.sh                               && \
+      sudo usermod -aG docker ${aws_instance.docker1.key_name}    && \
+      rm -rf *"
+  }
   depends_on = [aws_security_group.allow_ssh, aws_key_pair.docker]
 }
 
