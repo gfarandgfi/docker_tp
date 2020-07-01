@@ -1,3 +1,7 @@
+output "vpc_id" {
+  value = module.network.
+}
+
 output "student_instance_1_public_ip" {
   value = module.student_instance_1.aws_instance.public_ip
 }

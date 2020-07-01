@@ -1,17 +1,12 @@
-# Get the id of the security group created in the root module
-data "aws_security_group" "selected" {
-  name = "allow_ssh"
-}
-
 # Create a primary network interface
 resource "aws_network_interface" "primary" {
-  subnet_id   = aws_subnet.formation_docker.id
+  subnet_id   = module.network.subnet_id
   description = "primary network interface"
-  security_groups = [aws_security_group.allow_ssh.id]
+  security_groups = [module.network.security_group_id]
   tags = {
     Name = "primary_network_interface"
   }
-  depends_on = [aws_subnet.formation_docker, aws_security_group.allow_ssh]
+  depends_on = [module.network]
 }
 
 
@@ -34,6 +29,6 @@ resource "aws_instance" "student" {
   provisioner "remote-exec" {
     script = "./files/install_server.sh"
   }
-  # depends_on = [aws_security_group.allow_ssh, aws_key_pair.docker]
+  depends_on = [module.network]
 }
 
