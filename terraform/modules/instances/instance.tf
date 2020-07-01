@@ -4,18 +4,6 @@ resource "random_string" "admin_pass" {
   special = true
 }
 
-# Generate ssh key
-resource "tls_private_key" "ssh_key" {
-  algorithm  = "RSA"
-  rsa_bits   = 4096
-}
-
-# Pass ssh key to AWS
-resource "aws_key_pair" "admin" {
-   key_name   = "admin"
-   public_key = tls_private_key.ssh_key.public_key_openssh
- }
-
 resource "aws_network_interface" "primary" {
   subnet_id   = aws_subnet.formation_docker.id
   description = "primary network interface"
@@ -31,7 +19,7 @@ resource "aws_network_interface" "primary" {
 resource "aws_instance" "student" {
   ami           = var.aws_instance_ami
   instance_type = var.aws_instance_type
-  key_name      = "admin"
+  key_name      = "docker"
   security_groups = [aws_security_group.allow_ssh.id]
   # get_password_data = true
   associate_public_ip_address = true
@@ -55,6 +43,6 @@ resource "aws_instance" "student" {
   #     sudo usermod -aG docker ${aws_instance.docker1.key_name}    && \
   #     rm -rf *"
   # }
-  depends_on = [aws_security_group.allow_ssh]
+  depends_on = [aws_security_group.allow_ssh, aws_key_pair.docker]
 }
 
