@@ -31,7 +31,7 @@ output "student_instance_3_ssh_key_public" {
 }
 
 output "student_instance_3_root_password" {
-  value = module.student_instance_3.random8string.admin_pass.result
+  value = module.student_instance_3.random_string.admin_pass.result
 }
 
 output "student_instance_4_public_ip" {
@@ -55,6 +55,6 @@ output "student_instance_5_ssh_key_public" {
 }
 
 output "student_instance_5_root_password" {
-  value = module.student_instance_5.random8string.admin_pass.result
+  value = module.student_instance_5.random_string.admin_pass.result
 }
 
