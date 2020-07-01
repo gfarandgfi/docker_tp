@@ -28,8 +28,13 @@ resource "aws_instance" "student" {
   # Install the git and docker binaries
   provisioner "local-exec" {
     working_dir = /tmp
-    command = "
-      sudo apt update && sudo apt install -y git && sudo apt install -y curl && curl -fsSL https://get.docker.com -o get-docker.sh && sudo sh get-docker.sh && sudo usermod -aG docker ${aws_instance.docker1.key_name} rm -rf *"
+    command = <<EOT
+    sudo apt update && sudo apt install -y git 
+    && sudo apt install -y curl 
+    && curl -fsSL https://get.docker.com -o get-docker.sh 
+    && sudo sh get-docker.sh 
+    && sudo usermod -aG docker ${aws_instance.docker1.key_name} rm -rf *
+    EOT
   }
   depends_on = [aws_security_group.allow_ssh, aws_key_pair.docker]
 }
