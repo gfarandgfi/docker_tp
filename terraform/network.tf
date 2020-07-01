@@ -1,4 +1,5 @@
 resource "aws_vpc" "formation_docker" {
+  enable_dns_hostnames = true
   cidr_block = "172.16.0.0/16"
 
   tags = {
