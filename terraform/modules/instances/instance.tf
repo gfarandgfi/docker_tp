@@ -18,12 +18,12 @@ resource "aws_instance" "student" {
   security_groups = [data.aws_security_group.selected.id]
   associate_public_ip_address = true
   tags = var.tags
-  # network_interface {
-  #   device_index = 0
-  #   network_interface_id = aws_network_interface.primary.id
-  #   # False is the only valid value at the time of writing this code
-  #   delete_on_termination = false
-  # }
+  network_interface {
+    device_index = 0
+    network_interface_id = aws_network_interface.primary.id
+    # False is the only valid value at the time of writing this code
+    delete_on_termination = false
+  }
 
   # Install the git and docker binaries
   provisioner "remote-exec" {

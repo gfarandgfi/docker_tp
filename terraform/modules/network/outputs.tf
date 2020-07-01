@@ -9,3 +9,8 @@ output "subnet_id" {
 output "security_group_id" {
   value = aws_security_group.allow_ssh.id
 }
+
+# # Uncomment if you created a new ssh key
+# output "ssh_key" {
+#   value = tls_private_key.ssh_key.public_key_pem
+# }

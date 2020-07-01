@@ -1,60 +1,7 @@
-# output "student_instance_1_public_ip" {
-#   value = student_instance_1.aws_instance.public_ip
-# }
+output "public_ip" {
+  value = aws_instance.public_ip
+}
 
-# output "student_instance_1_ssh_key_public" {
-#   value = student_instance_1.tls_private_key.public_key_openssh
-# }
-
-# output "student_instance_1_root_password" {
-#   value = student_instance_1.random8string.admin_pass.result
-# }
-
-# output "student_instance_2_public_ip" {
-#   value = student_instance_2.aws_instance.public_ip
-# }
-
-# output "student_instance_2_ssh_key_public" {
-#   value = student_instance_2.tls_private_key.public_key_openssh
-# }
-
-# output "student_instance_2_root_password" {
-#   value = student_instance_2.random_string.admin_pass.result
-# }
-
-# output "student_instance_3_public_ip" {
-#   value = student_instance_3.aws_instance.public_ip
-# }
-
-# output "student_instance_3_ssh_key_public" {
-#   value = student_instance_3.tls_private_key.public_key_openssh
-# }
-
-# output "student_instance_3_root_password" {
-#   value = student_instance_3.random_string.admin_pass.result
-# }
-
-# output "student_instance_4_public_ip" {
-#   value = student_instance_4.aws_instance.public_ip
-# }
-
-# output "student_instance_4_ssh_key_public" {
-#   value = student_instance_4.tls_private_key.public_key_openssh
-# }
-
-# output "student_instance_4_root_password" {
-#   value = student_instance_4.random8string.admin_pass.result
-# }
-
-# output "student_instance_5_public_ip" {
-#   value = student_instance_5.aws_instance.public_ip
-# }
-
-# output "student_instance_5_ssh_key_public" {
-#   value = student_instance_5.tls_private_key.public_key_openssh
-# }
-
-# output "student_instance_5_root_password" {
-#   value = student_instance_5.random_string.admin_pass.result
-# }
-
+output "public_dns" {
+  value = aws_instance.public_dns
+}
