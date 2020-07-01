@@ -19,7 +19,7 @@ resource "aws_network_interface" "primary" {
 resource "aws_instance" "student" {
   ami           = var.aws_instance_ami
   instance_type = var.aws_instance_type
-  key_name      = "docker"
+  key_name      = "formation_docker"
   security_groups = [data.aws_security_group.selected.id]
   associate_public_ip_address = true
   tags = var.tags
