@@ -11,8 +11,8 @@ resource "aws_subnet" "formation_docker" {
   vpc_id            = aws_vpc.formation_docker.id
   cidr_block        = var.subnet_cidr_block
   availability_zone = var.aws_default_zone
-  tags = var.subnet_tags
-  
+  tags = var.network_tags
+
   depends_on = [aws_vpc.formation_docker]
 }
 
