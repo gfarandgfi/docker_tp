@@ -1,6 +1,6 @@
 # Create a primary network interface
 resource "aws_network_interface" "primary" {
-  subnet_id       = module.network.subnet_id
+  subnet_id       = var.subnet_id
   description     = "primary network interface"
   security_groups = [module.network.security_group_id]
   tags = {
@@ -13,6 +13,9 @@ resource "aws_network_interface" "primary" {
 # Provision a Debian 10 Buster machine 
 resource "aws_instance" "student" {
   for_each  = var.student_names
+  tags      = {
+    name    = "${each.key}"
+  }
   ami           = var.aws_instance_ami
   instance_type = var.aws_instance_type
   key_name      = "formation_docker"

@@ -15,7 +15,7 @@ output "instance_ip" {
 }
 
 output "instance_dns_name" {
-  value = module.network.public_dns
+  value = module.instances.public_dns
 }
 
 # # Uncomment if you created a new ssh key

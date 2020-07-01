@@ -14,4 +14,8 @@ variable "aws_instance_ami" {
 variable "student_names" {
   type = list(string)
 }
-  
+
+variable "subnet_id" {
+  type = string
+}
+

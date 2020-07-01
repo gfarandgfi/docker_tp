@@ -17,9 +17,6 @@ module "instances" {
   source            = "./modules/instances"
   aws_instance_type = var.aws_instance_type
   aws_instance_ami = var.aws_instance_ami
-  tags      = {
-    name    = "${each.key}"
-  }
   student_names = ["tariq_anoual", "ludovic_bels", "loic_kervarec", "florian_cambier", "iliyan_pavlov"]
 }
 
