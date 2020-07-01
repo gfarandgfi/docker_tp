@@ -15,6 +15,7 @@ module "network" {
 # Create an instance for each student
 module "instances" {
   source            = "./modules/instances"
+  subnet_id = module.network.subnet_id
   aws_instance_type = var.aws_instance_type
   aws_instance_ami = var.aws_instance_ami
   student_names = ["tariq_anoual", "ludovic_bels", "loic_kervarec", "florian_cambier", "iliyan_pavlov"]
