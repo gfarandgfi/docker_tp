@@ -29,6 +29,6 @@ resource "aws_instance" "student" {
   provisioner "remote-exec" {
     script = "./files/install_server.sh"
   }
-  depends_on = [aws_security_group.allow_ssh, aws_key_pair.docker]
+  # depends_on = [aws_security_group.allow_ssh, aws_key_pair.docker]
 }
 
