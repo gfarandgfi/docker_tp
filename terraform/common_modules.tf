@@ -1,4 +1,4 @@
-# Call the instances module four times to create four separate instances with different tags
+# Create five separate instances with different tags
 module "student_instance_1" {
   source = "../modules/instances"
   tags = {
@@ -31,7 +31,7 @@ module "student_instance_4" {
   }
 }
 
-module "student_instance_4" {
+module "student_instance_5" {
   source = "../modules/instances"
   tags = {
     student_name = "iliyanpavlov"
