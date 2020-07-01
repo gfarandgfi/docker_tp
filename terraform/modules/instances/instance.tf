@@ -12,22 +12,11 @@ resource "aws_network_interface" "primary" {
 
 # Provision a Debian 10 Buster machine 
 resource "aws_instance" "student" {
-<<<<<<< HEAD
   for_each  = var.student_names
   ami           = var.aws_instance_ami
   instance_type = var.aws_instance_type
   key_name      = "formation_docker"
   security_groups = [data.aws_security_group.selected.id]
-=======
-  for_each = var.student_names
-  tags = {
-    name = "${each.key}"
-  }
-  ami                         = var.aws_instance_ami
-  instance_type               = var.aws_instance_type
-  key_name                    = "formation_docker"
-  security_groups             = [data.aws_security_group.selected.id]
->>>>>>> 557cc33eeac46a103440c02412ec0cfd35b4548b
   associate_public_ip_address = true
   # tags = var.tags
   network_interface {
