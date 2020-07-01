@@ -1,3 +1,8 @@
+# Get the id of the security group created in the root module
+data "aws_security_group" "selected" {
+  name = "allow_ssh"
+}
+
 # Create a primary network interface
 resource "aws_network_interface" "primary" {
   subnet_id   = aws_subnet.formation_docker.id
@@ -15,7 +20,7 @@ resource "aws_instance" "student" {
   ami           = var.aws_instance_ami
   instance_type = var.aws_instance_type
   key_name      = "docker"
-  security_groups = [aws_security_group.allow_ssh.id]
+  security_groups = [data.aws_security_group.selected.id]
   associate_public_ip_address = true
   tags = var.tags
   # network_interface {
