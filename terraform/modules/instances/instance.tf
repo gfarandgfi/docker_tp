@@ -10,7 +10,7 @@ resource "aws_network_interface" "primary" {
 }
 
 # Provision a Debian 10 Buster machine 
-resource "aws_instance" "${each.value}" {
+resource "aws_instance" "student" {
   for_each              = var.student_names
   tags                  = {
     Name = "${each.value}"
