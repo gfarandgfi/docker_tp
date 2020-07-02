@@ -7,7 +7,7 @@ output "subnet_id" {
 }
 
 output "security_group_ids" {
-  value = toset(aws_security_group.*.id)
+  value = toset(aws_security_group.[*].id)
 }
 
 # # Uncomment if you created a new ssh key
