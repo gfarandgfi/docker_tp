@@ -2,7 +2,7 @@
 resource "aws_network_interface" "primary" {
   subnet_id       = var.subnet_id
   description     = "primary network interface"
-  security_groups = [var.security_group_id]
+  security_groups = var.security_group_id
   tags = {
     Name = "primary_network_interface"
   }
@@ -34,6 +34,5 @@ resource "aws_instance" "student" {
   provisioner "remote-exec" {
     script = "./files/install_server.sh"
   }
-  depends_on = [module.network]
 }
 
