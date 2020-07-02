@@ -20,5 +20,5 @@ variable "aws_default_zone" {
 
 variable "student_names" {
   description = "the name of the students taking part in the training, in firstname_lastname format"
-  type = list(string)
+  type = map(string)
 }
