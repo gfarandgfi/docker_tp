@@ -22,6 +22,8 @@ resource "aws_internet_gateway" "formation_docker" {
 
 data "aws_route_table" "selected" {
   subnet_id = aws_subnet.formation_docker.id
+
+  depends_on = [aws_internet_gateway.formation_docker]
 }
 
 resource "aws_route_table_association" "a" {
