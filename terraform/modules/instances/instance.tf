@@ -1,15 +1,17 @@
 # Create a primary network interface
 resource "aws_network_interface" "primary" {
-  count           = length(var.student_names)
+  for_each        = var.student_names
+  name            = ${each.key}
   subnet_id       = var.subnet_id
   description     = "primary network interface"
   security_groups = var.security_group_id
-  tags = var.student_names[count.index]
+  tags            = var.student_names[count.index]
 }
 
 # Provision a Debian 10 Buster machine 
 resource "aws_instance" "student" {
-  count                 = length(aws_network_interface.primary.id)
+  for_each              = var.student_names
+  name                  = ${each.key}
   ami                   = var.aws_instance_ami
   instance_type         = var.aws_instance_type
   key_name              = "formation_docker"
