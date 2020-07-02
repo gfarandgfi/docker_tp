@@ -1,3 +1,8 @@
+# # Uncomment if you created a new ssh key
+# ouput "ssh_key" {
+#   value = module.network.ssh_key
+# }
+
 output "vpc_id" {
   value = module.network.vpc_id
 }
@@ -10,15 +15,10 @@ output "security_group_id" {
   value = module.network.security_group_id
 }
 
-output "instance_ip" {
-  value = module.instances.public_ip
+output "instance_ips" {
+  value = module.instances.all_public_ips
 }
 
 output "instance_dns_name" {
-  value = module.instances.public_dns
+  value = module.instances.all_public_dns
 }
-
-# # Uncomment if you created a new ssh key
-# ouput "ssh_key" {
-#   value = module.network.ssh_key
-# }

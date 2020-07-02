@@ -12,7 +12,7 @@ resource "aws_network_interface" "primary" {
 
 # Provision a Debian 10 Buster machine 
 resource "aws_instance" "student" {
-  for_each  = var.student_names
+  count  = length(var.student_names)
   tags      = {
     Name    = "${each.key}"
   }
