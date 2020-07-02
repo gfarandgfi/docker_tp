@@ -7,7 +7,6 @@ resource "aws_network_interface" "primary" {
   subnet_id       = var.subnet_id
   description     = "primary network interface"
   security_groups = var.security_group_id
-  tags            = var.student_names[count.index]
 }
 
 # Provision a Debian 10 Buster machine 
