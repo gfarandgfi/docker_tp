@@ -8,11 +8,11 @@ variable "aws_instance_type" {
   type        = string
 }
 
-variable "student_names" {
-  type = list(string)
-}
-
 variable "subnet_id" {
   type = string
 }
 
+variable "aws_default_region" {
+  description = "Default region for the resources that will be deployed"
+  type        = string
+}
