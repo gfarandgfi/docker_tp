@@ -20,3 +20,11 @@ resource "aws_internet_gateway" "formation_docker" {
   depends_on = [aws_vpc.formation_docker, aws_subnet.formation_docker]
 }
 
+data "aws_route_table" "selected" {
+  subnet_id = aws_subnet.formation_docker.id
+}
+
+resource "aws_route_table_association" "a" {
+  gateway_id      = aws_internet_gateway.formation_docker.id
+  route_table_id  = data.aws_route_table.selected.id
+}
