@@ -1,4 +1,6 @@
-# Uncomment if you need to create a key
+# Uncomment the two resources below only if you need to create a new ssh key
+# You will also need to uncomment output "ssh_key" in outputs.tf
+# This is untested
 # # Generate ssh key
 # resource "tls_private_key" "ssh_key" {
 #   algorithm  = "RSA"

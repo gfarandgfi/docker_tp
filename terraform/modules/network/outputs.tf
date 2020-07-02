@@ -11,6 +11,8 @@ output "security_group_id_common" {
 }
 
 # # Uncomment if you created a new ssh key
+# You will also need to uncomment the two resources in ssh.tf
+# This is untested
 # output "ssh_key" {
 #   value = tls_private_key.ssh_key.public_key_pem
 # }

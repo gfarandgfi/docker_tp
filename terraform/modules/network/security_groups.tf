@@ -1,4 +1,4 @@
-# Open port 22 so the machine is accessible via ssh
+# Open all ports for tests
 resource "aws_security_group" "common" {
   name        = "common"
   description = "allow all traffic in and out"

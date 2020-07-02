@@ -11,8 +11,4 @@ resource "aws_instance" "student" {
   key_name                = "formation_docker"
   vpc_security_group_ids  = var.security_group_ids
   associate_public_ip_address = true
-  # Install the git and docker binaries
-  # provisioner "remote-exec" {
-  #   script = "./files/install_server.sh"
-  # }
 }
