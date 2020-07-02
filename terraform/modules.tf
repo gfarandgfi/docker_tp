@@ -5,10 +5,7 @@ module "network" {
   vpc_cidr_block    = "172.16.0.0/16"
   subnet_cidr_block = "172.16.0.0/24"
   network_tags = {
-    Name = "subnet_formation_docker"
-  }
-  subnet_tags = {
-    Name = "subnet_formation_docker"
+    Name = "formation_docker"
   }
 }
 

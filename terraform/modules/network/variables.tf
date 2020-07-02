@@ -15,8 +15,6 @@ variable "aws_default_zone" {
 
 variable "network_tags" {}
 
-variable "subnet_tags" {}
-
 variable "vpc_cidr_block" {
   type = string
 }
