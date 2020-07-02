@@ -13,10 +13,6 @@ resource "aws_network_interface" "primary" {
 resource "aws_instance" "student" {
   count  = length(var.student_names)
   student_names = var.student_names[count.index]
-  for_each = var.student_names
-  tags      = {
-    Name    = "${each.key}"
-  }
   ami           = var.aws_instance_ami
   instance_type = var.aws_instance_type
   key_name      = "formation_docker"
