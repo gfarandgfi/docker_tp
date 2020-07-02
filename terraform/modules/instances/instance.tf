@@ -2,7 +2,7 @@
 resource "aws_network_interface" "primary" {
   for_each        = var.student_names
   tags            = {
-    Name = "${each.key}"
+    Name = "${each.value}"
   }
   subnet_id       = var.subnet_id
   description     = "primary network interface"
@@ -13,7 +13,7 @@ resource "aws_network_interface" "primary" {
 resource "aws_instance" "student" {
   for_each              = var.student_names
   tags                  = {
-    Name = "${each.key}"
+    Name = "${each.value}"
   }
   ami                   = var.aws_instance_ami
   instance_type         = var.aws_instance_type

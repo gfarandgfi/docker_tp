@@ -8,7 +8,13 @@ aws_default_zone = "eu-west-3a"
 
 aws_instance_type = "t2.medium"
 
-student_names = ["tariq_anoual", "ludovic_bels", "loic_kervarec", "florian_cambier", "iliyan_pavlov"]
+student_names = {
+    Name = "tariq_anoual" 
+    Name = "ludovic_bels"
+    Name = "loic_kervarec"
+    Name = "florian_cambier"
+    Name = "iliyan_pavlov"
+    }
 
 
 
