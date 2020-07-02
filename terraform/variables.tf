@@ -4,9 +4,6 @@ variable "student_names" {}
 
 variable "aws_instance_ami" {}
 
-# variable "" {}
+variable "aws_default_region" {}
 
-# variable "" {}
-
-# variable "" {}
-
+variable "aws_default_zone" {}
