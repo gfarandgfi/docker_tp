@@ -1,3 +1,8 @@
+variable "student_names" {
+  description = "the name of the students taking part in the training, in firstname_name format"
+  type = list(string)
+}
+
 variable "aws_instance_ami" {
   description = "The AMI for the OS. Defaults to Debian Buster"
   type        = string
@@ -8,11 +13,11 @@ variable "aws_instance_type" {
   type        = string
 }
 
+# variable "aws_default_region" {
+#   description = "Default region for the resources that will be deployed"
+#   type        = string
+# }
+
 variable "subnet_id" {
   type = string
-}
-
-variable "aws_default_region" {
-  description = "Default region for the resources that will be deployed"
-  type        = string
 }
