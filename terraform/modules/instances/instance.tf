@@ -1,5 +1,3 @@
-data
-
 # Create a primary network interface
 resource "aws_network_interface" "primary" {
   count           = length(var.student_names)
