@@ -6,7 +6,6 @@ resource "aws_network_interface" "primary" {
   tags = {
     Name = "primary_network_interface"
   }
-  depends_on = [module.network]
 }
 
 
