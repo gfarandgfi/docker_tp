@@ -19,6 +19,7 @@ module "instances" {
   aws_instance_type = var.aws_instance_type
   aws_instance_ami = var.aws_instance_ami
   security_group_id = module.network.security_group_id
+  student_names = [var.student_names]
 }
 
 # # Create five separate instances with different tags
