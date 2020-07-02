@@ -4,7 +4,3 @@ output "all_public_info" {
       student_names.public_ip => student_names.public_dns
   }
 }
-
-# output "all_public_dns" {
-#   value = aws_instance.student.public_dns
-# }

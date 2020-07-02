@@ -2,7 +2,7 @@
 resource "aws_instance" "student" {
   for_each              = var.student_names
   tags                  = {
-    Name = "${each.value}"
+    Name = "${each.key}"
   }
   ami                     = var.aws_instance_ami
   instance_type           = var.aws_instance_type
