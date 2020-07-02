@@ -3,6 +3,7 @@ resource "aws_security_group" "common" {
   name        = "common"
   description = "allow common ports in and all out"
   vpc_id      = aws_vpc.formation_docker.id
+  subnet_id   = aws_subnet.formation_docker.id
 
   ingress {
     from_port   = 22
