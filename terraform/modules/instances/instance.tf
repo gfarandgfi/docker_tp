@@ -12,20 +12,17 @@ resource "aws_network_interface" "primary" {
 # Provision a Debian 10 Buster machine 
 resource "aws_instance" "student" {
   count  = length(var.student_names)
-  student_names = var.student_names[count.index]
   ami           = var.aws_instance_ami
   instance_type = var.aws_instance_type
   key_name      = "formation_docker"
   security_groups = var.security_group_id
   associate_public_ip_address = true
-  # tags = var.tags
   network_interface {
     device_index         = 0
     network_interface_id = aws_network_interface.primary.id
     # False is the only valid value at the time of writing this code
     delete_on_termination = false
   }
-
   # Install the git and docker binaries
   provisioner "remote-exec" {
     script = "./files/install_server.sh"
