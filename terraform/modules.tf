@@ -15,7 +15,7 @@ module "instances" {
   subnet_id = module.network.subnet_id
   aws_instance_type = var.aws_instance_type
   aws_instance_ami = var.aws_instance_ami
-  security_group_ids = [module.network.security_group_id_ssh, module.network.security_group_id_http, module.network.security_group_id_tls]
+  security_group_ids = [module.network.security_group_id_common]
   student_names = var.student_names
   # depends_on = [module.network]
 }
