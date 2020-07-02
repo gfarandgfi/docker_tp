@@ -20,7 +20,7 @@ module "instances" {
   aws_instance_ami = var.aws_instance_ami
   security_group_id = module.network.security_group_id
   student_names = var.student_names
-  depends_on = [module.network]
+  # depends_on = [module.network]
 }
 
 # # Create five separate instances with different tags
