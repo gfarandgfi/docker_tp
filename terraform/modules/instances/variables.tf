@@ -13,6 +13,11 @@ variable "aws_instance_type" {
   type        = string
 }
 
+variable "aws_default_zone" {
+  description = "Default zone for the resources that will be deployed"
+  type        = string
+}
+
 # variable "aws_default_region" {
 #   description = "Default region for the resources that will be deployed"
 #   type        = string
