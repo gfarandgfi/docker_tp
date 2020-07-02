@@ -21,3 +21,7 @@ variable "aws_instance_type" {
 variable "subnet_id" {
   type = string
 }
+
+variable "security_group_id" {
+  type = list(string)
+}

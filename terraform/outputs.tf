@@ -19,6 +19,6 @@ output "instance_ips" {
   value = module.instances.all_public_ips
 }
 
-output "instance_dns_name" {
+output "instance_dns_names" {
   value = module.instances.all_public_dns
 }

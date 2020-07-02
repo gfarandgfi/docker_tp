@@ -2,7 +2,7 @@
 resource "aws_network_interface" "primary" {
   subnet_id       = var.subnet_id
   description     = "primary network interface"
-  security_groups = [module.network.security_group_id]
+  security_groups = [var.security_group_id]
   tags = {
     Name = "primary_network_interface"
   }
@@ -13,6 +13,7 @@ resource "aws_network_interface" "primary" {
 # Provision a Debian 10 Buster machine 
 resource "aws_instance" "student" {
   count  = length(var.student_names)
+  student_names = var.student_names[count.index]
   tags      = {
     Name    = "${each.key}"
   }
