@@ -1,6 +1,5 @@
 variable "student_names" {
   description = "the name of the students taking part in the training, in firstname_name format"
-  type = list(string)
 }
 
 variable "aws_instance_ami" {
