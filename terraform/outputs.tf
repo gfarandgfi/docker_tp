@@ -11,8 +11,8 @@ output "subnet_id" {
   value = module.network.subnet_id
 }
 
-output "security_group_name" {
-  value = module.network.security_group_name
+output "security_group_id" {
+  value = module.network.security_group_id
 }
 
 output "instance_ips" {

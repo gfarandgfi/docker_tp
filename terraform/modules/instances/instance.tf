@@ -6,7 +6,7 @@
 #   }
 #   subnet_id       = var.subnet_id
 #   description     = "primary network interface"
-#   security_groups = var.security_group_name
+#   security_groups = var.security_group_id
 # }
 
 # Provision a Debian 10 Buster machine 
@@ -15,10 +15,10 @@ resource "aws_instance" "student" {
   tags                  = {
     Name = "${each.value}"
   }
-  ami                   = var.aws_instance_ami
-  instance_type         = var.aws_instance_type
-  key_name              = "formation_docker"
-  security_groups       = var.security_group_name
+  ami                     = var.aws_instance_ami
+  instance_type           = var.aws_instance_type
+  key_name                = "formation_docker"
+  vpc_security_group_ids  = var.security_group_id
   associate_public_ip_address = true
   # network_interface {
   #   device_index         = 0
