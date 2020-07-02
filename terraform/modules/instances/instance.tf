@@ -18,7 +18,7 @@ resource "aws_instance" "student" {
   ami                   = var.aws_instance_ami
   instance_type         = var.aws_instance_type
   key_name              = "formation_docker"
-  security_groups       = [var.security_group_name]
+  security_groups       = var.security_group_name
   associate_public_ip_address = true
   # network_interface {
   #   device_index         = 0
