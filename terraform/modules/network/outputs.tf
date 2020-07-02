@@ -7,7 +7,7 @@ output "subnet_id" {
 }
 
 output "security_group_id" {
-  value = aws_security_group.common.id
+  value = toset(aws_security_group.common.id)
 }
 
 # # Uncomment if you created a new ssh key
