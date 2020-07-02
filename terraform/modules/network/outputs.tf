@@ -6,8 +6,16 @@ output "subnet_id" {
   value = aws_subnet.formation_docker.id
 }
 
-output "security_group_ids" {
-  value = toset(aws_security_group.[*].id)
+output "security_group_id_ssh" {
+  value =aws_security_group.ssh.id
+}
+
+output "security_group_id_http" {
+  value =aws_security_group.http.id
+}
+
+output "security_group_id_tls" {
+  value =aws_security_group.tls.id
 }
 
 # # Uncomment if you created a new ssh key
