@@ -22,7 +22,7 @@ resource "aws_instance" "student" {
   associate_public_ip_address = true
   network_interface {
     device_index         = 0
-    network_interface_id = aws_network_interface.primary.id[count.index]
+    network_interface_id = aws_network_interface.primary.id
     # False is the only valid value at the time of writing this code. Should be changed to true as soon as supported
     delete_on_termination = false
   }
