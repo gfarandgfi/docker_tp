@@ -9,11 +9,11 @@ aws_default_zone = "eu-west-3a"
 aws_instance_type = "t2.medium"
 
 student_names = {
-    Name = "tariq_anoual" 
-    Name = "ludovic_bels"
-    Name = "loic_kervarec"
-    Name = "florian_cambier"
-    Name = "iliyan_pavlov"
+    student_1 = "tariq_anoual" 
+    student_2 = "ludovic_bels"
+    student_3 = "loic_kervarec"
+    student_4 = "florian_cambier"
+    student_5 = "iliyan_pavlov"
     }
 
 
