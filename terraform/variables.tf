@@ -18,10 +18,6 @@ variable "aws_default_zone" {
   type        = string
 }
 
-variable "security_group_id" {
-  type = list(string)
-}
-
 variable "student_names" {
   description = "the name of the students taking part in the training, in firstname_lastname format"
   type = list(string)
